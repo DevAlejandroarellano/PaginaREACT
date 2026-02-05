@@ -1,0 +1,50 @@
+.descargas-container {
+  max-width: 460px;      /* ancho más compacto, como el original */
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.descargas-title {
+  color: #0d6efd;
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+
+.descargas-text {
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 16px;
+}
+
+.btn-descarga {
+  display: block;
+  margin: 12px 0;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-descarga:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.blue {
+  background: #0d6efd;
+}
+
+.green {
+  background: #198754;
+}
+
+.dark {
+  background: #212529;
+}
