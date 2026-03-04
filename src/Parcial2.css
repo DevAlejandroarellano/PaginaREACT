@@ -1,0 +1,64 @@
+.parcial2-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #282c34; 
+  color: white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.metodologias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.box {
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cascada { background-color: #0d6efd; } /* Azul */
+.modelo-v { background-color: #6c757d; } /* Gris */
+.agiles { background-color: #198754; } /* Verde */
+.scrum { background-color: #dc3545; } /* Rojo */
+.kanban { background-color: #ffc107; color: black; } /* Amarillo */
+.xp { background-color: #0dcaf0; color: black; } /* Celeste */
+.hibridas { 
+  background-color: #212529; /* Negro */
+  max-width: 290px; 
+  margin: 10px auto; 
+} 
+
+.links-section {
+  margin: 40px 0;
+}
+
+.links-section a, .return-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+}
+
+.links-section a:hover, .return-link:hover {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.frase-section {
+  margin: 30px 0;
+  font-style: italic;
+  background-color: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
