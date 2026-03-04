@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/PaginaREACT/static/css/main.1e9aa7f1.css",
-    "main.js": "/PaginaREACT/static/js/main.4bbe4090.js",
+    "main.js": "/PaginaREACT/static/js/main.a467bb60.js",
     "static/js/453.cb1a6bb5.chunk.js": "/PaginaREACT/static/js/453.cb1a6bb5.chunk.js",
     "static/media/profile.jpg": "/PaginaREACT/static/media/profile.6816e4e7db8601469692.jpg",
     "index.html": "/PaginaREACT/index.html",
     "main.1e9aa7f1.css.map": "/PaginaREACT/static/css/main.1e9aa7f1.css.map",
-    "main.4bbe4090.js.map": "/PaginaREACT/static/js/main.4bbe4090.js.map",
+    "main.a467bb60.js.map": "/PaginaREACT/static/js/main.a467bb60.js.map",
     "453.cb1a6bb5.chunk.js.map": "/PaginaREACT/static/js/453.cb1a6bb5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e9aa7f1.css",
-    "static/js/main.4bbe4090.js"
+    "static/js/main.a467bb60.js"
   ]
 }
