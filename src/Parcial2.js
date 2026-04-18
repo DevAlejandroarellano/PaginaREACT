@@ -1,53 +1,122 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Parcial2.css';
 
 function Parcial2() {
+  const [modalData, setModalData] = useState(null);
+
+  const abrirModal = (titulo, rutaImagen) => {
+    setModalData({ titulo, rutaImagen });
+  };
+
+  const cerrarModal = () => {
+    setModalData(null);
+  };
+
   return (
     <div className="parcial2-container">
-      [cite_start]<h1>METODOLOGÍAS DE DESARROLLO DE SW</h1> {/* [cite: 1] */}
+      <h1 className="main-title">METODOLOGÍAS DE DESARROLLO DE SW</h1>
       
-      [cite_start]<h2>¿Qué es una metodología de desarrollo de software?</h2> {/* [cite: 2, 3] */}
-      <p>
-        Las metodologías de desarrollo de software son un conjunto de técnicas y métodos organizativos que se aplican para diseñar soluciones de software informático. [cite_start]{/* [cite: 4] */}
-      </p>
-      <p>
-        El objetivo de las distintas metodologías es el de intentar organizar los equipos de trabajo para que estos desarrollen las funciones de un programa de la mejor manera posible. [cite_start]{/* [cite: 5] */}
+      <h2 className="sub-title">¿Qué es una metodología de desarrollo de software?</h2>
+      <p className="description">
+        Las metodologías de desarrollo de software son un conjunto de técnicas y métodos organizativos que se aplican para diseñar soluciones de software informático. El objetivo de las distintas metodologías es el de intentar organizar los equipos de trabajo para que estos desarrollen las funciones de un programa de la mejor manera posible.
       </p>
 
-      [cite_start]<h2>TIPOS DE METODOLOGÍAS</h2> {/* [cite: 6] */}
-      <div className="metodologias-grid">
-        [cite_start]<div className="box cascada">CASCADA</div> {/* [cite: 7] */}
-        [cite_start]<div className="box modelo-v">MODELO V</div> {/* [cite: 8] */}
-        [cite_start]<div className="box agiles">ÁGILES</div> {/* [cite: 9] */}
-        [cite_start]<div className="box scrum">SCRUM</div> {/* [cite: 12] */}
-        [cite_start]<div className="box kanban">KANBAN</div> {/* [cite: 10] */}
-        [cite_start]<div className="box xp">XP</div> {/* [cite: 13] */}
-      </div>
-      [cite_start]<div className="box hibridas">HÍBRIDAS</div> {/* [cite: 11] */}
+      <h2 className="section-title">TIPOS DE METODOLOGÍAS</h2>
+      
+      <hr className="divider" />
 
-      <div className="links-section">
-        {/* Pega tu URL dentro de las comillas del href */}
-        <a href={/* "URL_TABLERO_AQUI" */ ""} target="_blank" rel="noopener noreferrer">
-          [cite_start]LINK A TABLERO DE TRABAJO {/* [cite: 14] */}
+      <div className="metodologias-container">
+        <div className="metodologias-row">
+          <div 
+            className="box cascada" 
+            onClick={() => abrirModal('Cascada', '/practicas/1_cascada.png')}
+          >
+            CASCADA
+          </div>
+          <div 
+            className="box modelo-v" 
+            onClick={() => abrirModal('Modelo V', '/practicas/2_modelo_v.png')}
+          >
+            MODELO V
+          </div>
+          <div 
+            className="box agiles" 
+            onClick={() => abrirModal('Ágiles', '/practicas/3_agiles.png')}
+          >
+            ÁGILES
+          </div>
+          <div 
+            className="box scrum" 
+            onClick={() => abrirModal('Scrum', '/practicas/4_scrum.png')}
+          >
+            SCRUM
+          </div>
+        </div>
+        <div className="metodologias-row">
+          <div 
+            className="box kanban" 
+            onClick={() => abrirModal('Kanban', '/practicas/5_kanvan.png')}
+          >
+            KANBAN
+          </div>
+          <div 
+            className="box xp" 
+            onClick={() => abrirModal('XP', '/practicas/6_xp.png')}
+          >
+            XP
+          </div>
+          <div 
+            className="box hibridas" 
+            onClick={() => abrirModal('Híbridas', '/practicas/7_hibridas_modernas.png')}
+          >
+            HÍBRIDAS
+          </div>
+        </div>
+      </div>
+
+      <hr className="divider" />
+
+      <div className="tablero-section">
+        <h3 className="tablero-title">LINK A TABLERO DE TRABAJO</h3>
+        <a href="https://ingreyeslara.atlassian.net/jira/software/projects/CP/boards/169?sprintStarted=true&atlOrigin=eyJpIjoiOGE2YThjNzc5YTU5NDUwMGE2ZTUzY2I5MjI3YmNlYTMiLCJwIjoiaiJ9" target="_blank" rel="noopener noreferrer" className="outlined-button">
+          ---- JIRA ----
         </a>
-        <br/><br/>
-        <a href={/* "URL_JIRA_AQUI" */ ""} target="_blank" rel="noopener noreferrer">
-          [cite_start]---- JIRA {/* [cite: 15] */}
+      </div>
+
+      <hr className="divider" />
+
+      <div className="footer-section">
+        <Link to="/" className="outlined-button return-btn">
+          <a href="https://DevAlejandroarellano.github.io/PaginaREACT" target="_blank" rel="noopener noreferrer" className="outlined-button">
+          ---- REGRESAR MENÚ PRINCIPAL ----
         </a>
+
+        </Link>
+
+        <p className="frase-estatica">" Hakuna matata "</p>
+        
+        <p className="alumno-nombre">Alumno: Arellano Renteria Miguel Alejandro</p> 
       </div>
 
-      <div className="frase-section">
-        [cite_start]<p>Escribre la frase que colocaste en el tablero de metodología ágil:</p> {/* [cite: 17, 18] */}
-        [cite_start]<p>EJEMPLO: " JUSTO DO IT "</p> {/* [cite: 19] */}
-        {/* El PDF dice Juan Pérez Sosa, pero puedes poner tu nombre */}
-        [cite_start]<p>Alumno: Juan Pérez Sosa</p> {/* [cite: 20] */}
-      </div>
-
-      <br/>
-      <Link className="return-link" to="/">
-        [cite_start]REGRESAR MENÚ PRINCIPAL {/* [cite: 16] */}
-      </Link>
+      {modalData && (
+        <div className="modal-overlay" onClick={cerrarModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h4 className="modal-title">Vista de {modalData.titulo}</h4>
+              <button className="modal-close" onClick={cerrarModal}>✕</button>
+            </div>
+            <div className="modal-body">
+              <img 
+                /* Aquí añadimos process.env.PUBLIC_URL para forzar la ruta correcta */
+                src={process.env.PUBLIC_URL + modalData.rutaImagen} 
+                alt={`Imagen de ${modalData.titulo}`} 
+                className="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

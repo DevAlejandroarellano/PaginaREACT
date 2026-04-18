@@ -1,64 +1,215 @@
 .parcial2-container {
-  padding: 40px 20px;
+  padding: 40px 10%;
+  background-color: #ffffff;
+  color: #212529;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
-  background-color: #282c34; 
-  color: white;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
 }
 
-.metodologias-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.description {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #dee2e6;
+  margin: 40px auto;
+  width: 90%;
+}
+
+/* --- GRID DE METODOLOGÍAS --- */
+.metodologias-container {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-  max-width: 600px;
-  margin: 20px auto;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.metodologias-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap; 
 }
 
 .box {
-  padding: 15px;
-  border-radius: 8px;
-  font-weight: bold;
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.1rem;
   color: white;
   text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
-.cascada { background-color: #0d6efd; } /* Azul */
-.modelo-v { background-color: #6c757d; } /* Gris */
-.agiles { background-color: #198754; } /* Verde */
-.scrum { background-color: #dc3545; } /* Rojo */
-.kanban { background-color: #ffc107; color: black; } /* Amarillo */
-.xp { background-color: #0dcaf0; color: black; } /* Celeste */
-.hibridas { 
-  background-color: #212529; /* Negro */
-  max-width: 290px; 
-  margin: 10px auto; 
-} 
+.box:hover {
+  opacity: 0.85;
+}
 
-.links-section {
+/* Colores de las metodologías */
+.cascada { background-color: #0d6efd; }
+.modelo-v { background-color: #6c757d; }
+.agiles { background-color: #198754; }
+.scrum { background-color: #dc3545; }
+.kanban { background-color: #ffc107; color: #000; }
+.xp { background-color: #0dcaf0; color: white; }
+.hibridas { background-color: #212529; }
+
+/* --- BOTONES CON CONTORNO AZUL --- */
+.tablero-section {
   margin: 40px 0;
 }
 
-.links-section a, .return-link {
-  color: #61dafb;
+.tablero-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.outlined-button {
+  display: inline-block;
+  padding: 8px 20px;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 6px;
   text-decoration: none;
+  font-size: 1.1rem;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.outlined-button:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- SECCIÓN FINAL --- */
+.footer-section {
+  margin-top: 40px;
+}
+
+.return-btn {
+  margin-bottom: 40px;
+}
+
+.frase-prompt {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.frase-ejemplo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.frase-estatica {
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 10px 20px;
-  border: 1px solid #61dafb;
-  border-radius: 5px;
+  color: #0d6efd; 
+  margin-bottom: 30px;
 }
 
-.links-section a:hover, .return-link:hover {
-  background-color: #61dafb;
-  color: #282c34;
+.alumno-nombre {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
-.frase-section {
-  margin: 30px 0;
-  font-style: italic;
-  background-color: rgba(255,255,255,0.1);
+/* =========================================
+   ESTILOS PARA EL MODAL (Ventana Emergente)
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-body {
   padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 0 auto;
+  overflow-y: auto;
+  text-align: center;
+  background-color: #fcfcfc; 
+}
+
+.modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
